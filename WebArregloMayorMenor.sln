@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebArregloMayorMenor", "WebArregloMayorMenor\WebArregloMayorMenor.csproj", "{256B1109-66B5-492C-A0F9-CF3CD3D6B68B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{256B1109-66B5-492C-A0F9-CF3CD3D6B68B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{256B1109-66B5-492C-A0F9-CF3CD3D6B68B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{256B1109-66B5-492C-A0F9-CF3CD3D6B68B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{256B1109-66B5-492C-A0F9-CF3CD3D6B68B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {373A9266-C37D-4A22-BF05-F2092351CEF7}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,131 @@
+﻿@using WebArregloMayorMenor.Models
+@model EntResultado
+@{
+    Layout = null;
+
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>Create</title>
+
+    <style>
+        * {
+            font-family: 'Indie Flower', cursive;
+            font-size: 17px;
+
+        }
+        body {
+            background-color: #96fac6;
+            background-size: 85%;
+            
+            font-weight: 100;
+        }
+
+        .flex-container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-image: url(https://i.pinimg.com/736x/5e/9a/c6/5e9ac63909b062e1d7b67e30e1dee7b0.jpg);
+            margin: 50px 30px;
+            padding: 20px;
+            border: 3px dashed #873dd0;
+            outline: 14px solid #0cac6c;
+        }
+        .form__input {
+            width: 100%;
+            padding: 7px;
+            margin: 6px 0;
+            border-radius:15px;
+            background: transparent;
+            color: #fff;
+        }
+
+        .form__input:focus {
+                background: linear-gradient(to top, transparent, #222);
+                outline: none;
+                border-bottom: 3px solid #5f9;
+            }
+
+        th {
+            text-align:center
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            font-weight: 100;
+            font-size:70px;
+        }
+        td {
+           border-radius:15px;
+           text-align:center
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ingresa tus datos </h1>
+    <div class="flex-container">
+        <form>
+            <table>
+                <tr>
+                    <td>Nombre Completo</td>
+                    <td >@Html.TextBox("Nombre")</td>
+                </tr>
+                <tr>
+                    <td>Datos</td>
+                    <td class="tex_box">@Html.TextBox("Datos")</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input class="form__input" type="submit" name="Nombre" value="Guardar" formaction="/Home/CreatePost" /></td>
+                </tr>
+            </table>
+        </form>
+
+        
+        @if (Model != null)
+        {
+            <table>
+                <tr>
+                    <td>#</td>
+                    <td>Datos</td>
+                </tr>
+                @{
+                    string[] arreglo = Model.Arreglo.Split(',');
+                    for (int i = 0; i < arreglo.Count(); i++)
+                    {
+                        <tr>
+                            <td>@(i+1) </td>
+                            <td>@arreglo[i].ToString()</td>
+                        </tr>
+                    }
+
+
+                }
+            </table>
+
+
+            <table>
+                <tr>
+                    <td>valor maximo</td>
+                    <td>valor minimo</td>
+                </tr>
+
+                <tr>
+                    <td style="color:greenyellow">@Model.NumeroMaximo</td>
+                    <td style="color:red">@Model.NumeroMinimo</td>
+                </tr>
+            </table>
+        }
+        </div>
+</body>
+</html>
